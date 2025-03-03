@@ -1,4 +1,4 @@
-package com.example.focustime.presentation.components.atom
+package com.example.focustime.presentation.components.atom.autoresizedtext
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.MaterialTheme
@@ -13,9 +13,9 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
-fun autoResizedText(
-    modifier: Modifier = Modifier,
+fun AutoResizedText(
     text: String,
+    modifier: Modifier = Modifier,
     textStyle: TextStyle = MaterialTheme.typography.displayLarge
 ) {
     var timeTextStyle by remember { mutableStateOf(textStyle) }
@@ -35,5 +35,3 @@ fun autoResizedText(
         } // funcion cuando se calcula el tamaño del texto
     )
 }
-
-@Preview
