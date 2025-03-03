@@ -10,6 +10,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
 fun autoResizedText(
@@ -26,6 +27,7 @@ fun autoResizedText(
         style = timeTextStyle,
         onTextLayout = { result ->
             if (result.didOverflowWidth) {
+                // Copia lo anterior y le cambia sola una propiedad
                 timeTextStyle = timeTextStyle.copy(
                     fontSize = timeTextStyle.fontSize * fontSizeFactor
                 )
@@ -33,3 +35,5 @@ fun autoResizedText(
         } // funcion cuando se calcula el tamaño del texto
     )
 }
+
+@Preview
