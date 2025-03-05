@@ -1,4 +1,4 @@
-package com.example.focustime.presentation.components.molecule.informationitem
+package com.example.focustime.core.presentation.components.molecule.informationitem
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth

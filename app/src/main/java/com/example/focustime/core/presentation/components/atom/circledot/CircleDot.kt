@@ -1,4 +1,4 @@
-package com.example.focustime.presentation.components.atom.circledot
+package com.example.focustime.core.presentation.components.atom.circledot
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -9,7 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import com.example.focustime.presentation.theme.FocusTimeTheme
+import com.example.focustime.core.presentation.theme.FocusTimeTheme
 
 @Composable
 fun CircleDot(

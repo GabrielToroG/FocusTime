@@ -1,4 +1,4 @@
-package com.example.focustime.presentation.theme
+package com.example.focustime.core.presentation.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme

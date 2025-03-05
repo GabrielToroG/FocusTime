@@ -1,4 +1,4 @@
-package com.example.focustime.presentation.components.atom.borderedicon
+package com.example.focustime.core.presentation.components.atom.borderedicon
 
 import androidx.compose.material3.Icon
 import androidx.annotation.DrawableRes
@@ -12,7 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.vectorResource
-import com.example.focustime.presentation.theme.FocusTimeTheme
+import com.example.focustime.core.presentation.theme.FocusTimeTheme
 
 @Composable
 fun BorderedIcon(

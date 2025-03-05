@@ -1,4 +1,4 @@
-package com.example.focustime.presentation.components.atom.custombutton
+package com.example.focustime.core.presentation.components.atom.custombutton
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -11,7 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import com.example.focustime.presentation.theme.FocusTimeTheme
+import com.example.focustime.core.presentation.theme.FocusTimeTheme
 
 @Composable
 fun CustomButton(

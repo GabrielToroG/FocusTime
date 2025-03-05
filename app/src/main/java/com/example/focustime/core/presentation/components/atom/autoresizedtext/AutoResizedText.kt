@@ -1,4 +1,4 @@
-package com.example.focustime.presentation.components.atom.autoresizedtext
+package com.example.focustime.core.presentation.components.atom.autoresizedtext
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.MaterialTheme
