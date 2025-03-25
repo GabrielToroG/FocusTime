@@ -48,7 +48,10 @@ android {
         }
     }
 }
-
+// HomeKit
+// PresentationKit
+// Submodulo Home
+// Submodulo HomeDetails
 dependencies {
 
     implementation(libs.androidx.core.ktx)
@@ -60,6 +63,8 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     implementation("androidx.compose.material3:material3-window-size-class:1.3.1")
+    // ViewModel
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

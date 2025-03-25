@@ -24,7 +24,7 @@ private val DarkColorScheme = darkColorScheme(
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = primaryWhite,
+    primary = primaryBlack,
     secondary = gray,
     tertiary = lightGray,
     surface = primaryWhite,
@@ -46,7 +46,7 @@ fun ProvideDimensions(
 fun FocusTimeTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
-    dynamicColor: Boolean = true,
+    dynamicColor: Boolean = true, // dark o light theme
     windowSize: WindowWidthSizeClass = WindowWidthSizeClass.Compact,
     content: @Composable () -> Unit
 ) {

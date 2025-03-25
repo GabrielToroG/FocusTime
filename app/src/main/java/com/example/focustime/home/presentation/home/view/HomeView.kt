@@ -1,4 +1,4 @@
-package com.example.focustime.home.presentation
+package com.example.focustime.home.presentation.home.view
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -23,9 +23,12 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.focustime.R
 import com.example.focustime.core.presentation.components.atom.autoresizedtext.AutoResizedText
-import com.example.focustime.core.presentation.components.atom.borderedicon.BorderedIcon
 import com.example.focustime.core.presentation.components.atom.circledot.CircleDot
+import com.example.focustime.core.presentation.components.atom.custombutton.CustomButton
 import com.example.focustime.core.presentation.theme.FocusTimeTheme
+import com.example.focustime.home.presentation.home.view.elements.InformationElement
+import com.example.focustime.home.presentation.home.view.elements.TimerSession
+import com.example.focustime.home.presentation.home.view.elements.TimerTypeSession
 
 @Composable
 fun HomeScreen() {
@@ -47,6 +50,7 @@ fun HomeScreen() {
                 tint = MaterialTheme.colorScheme.primary
             )
         }
+
         AutoResizedText(
             "Focus Time",
             textStyle = MaterialTheme.typography.displayMedium.copy(
@@ -69,52 +73,46 @@ fun HomeScreen() {
         }
 
         Spacer(modifier = Modifier.height(FocusTimeTheme.dimensions.spacerMedium))
+
         TimerSession(
-            timer = "05:00"
+            timer = "05:00",
+            onIncreasedTap = { /* TODO */ },
+            onDecreasedTap = { /* TODO */ }
         )
-    }
-}
 
-@Composable
-fun TimerSession(
-    modifier: Modifier = Modifier,
-    timer: String,
-    onIncreasedTap: () -> Unit = {},
-    onDecreasedTap: () -> Unit = {}
-) {
-    Row(
-        modifier = modifier.fillMaxWidth(),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.Center
-    ) {
+        Spacer(modifier = Modifier.height(FocusTimeTheme.dimensions.spacerMedium))
+
+        TimerTypeSession(onTap = { /* TODO */ })
+
+        Spacer(modifier = Modifier.height(FocusTimeTheme.dimensions.spacerMedium))
+
         Column(
-            modifier = Modifier.fillMaxWidth().weight(1f),
-            horizontalAlignment = Alignment.CenterHorizontally
+            modifier = Modifier.fillMaxWidth(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center
         ) {
-            BorderedIcon(iconId = R.drawable.ic_minus, onTap = onDecreasedTap)
-            Spacer(modifier = Modifier.height(FocusTimeTheme.dimensions.spacerMedium))
-        }
-        AutoResizedText(
-            timer,
-            modifier = Modifier
-                .fillMaxWidth()
-                .weight(6f)
-                .align(Alignment.CenterVertically),
-            textStyle = MaterialTheme.typography.displayLarge.copy(
-                color = MaterialTheme.colorScheme.primary,
-                textAlign = TextAlign.Center
+            CustomButton(
+                text = "Start",
+                textColor = MaterialTheme.colorScheme.surface,
+                buttonColor = MaterialTheme.colorScheme.primary,
+                onTap =  { /* TODO */ }
             )
-        )
-        Column(
-            modifier = Modifier.fillMaxWidth().weight(1f),
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            BorderedIcon(iconId = R.drawable.ic_plus, onTap = onIncreasedTap)
-            Spacer(modifier = Modifier.height(FocusTimeTheme.dimensions.spacerMedium))
+
+            CustomButton(
+                text = "Reset",
+                textColor = MaterialTheme.colorScheme.primary,
+                buttonColor = MaterialTheme.colorScheme.surface,
+                onTap =  { /* TODO */ }
+            )
         }
+
+        InformationElement(
+            modifier = Modifier.weight(1f),
+            round = "10",
+            time = "45:00"
+        )
     }
 }
-
 
 @Preview(
     name = "HomeScreenPreview",
